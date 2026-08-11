@@ -8,7 +8,6 @@
   <title>You've Got Mail</title>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -104,6 +103,10 @@
       font-weight: 400;
 
       letter-spacing: -0.035em;
+
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
     }
 
 
@@ -193,7 +196,7 @@
       opacity: 0;
 
       padding:
-        28px 25px;
+        32px 30px;
 
       background:
         #fffaf0;
@@ -218,7 +221,7 @@
 
     .letter h2 {
       margin:
-        0 0 15px;
+        0 0 18px;
 
       color:
         #a94235;
@@ -244,10 +247,63 @@
         monospace;
 
       font-size:
-        14px;
+        clamp(14px, 1.1vw, 17px);
 
       line-height:
-        1.6;
+        1.7;
+    }
+
+
+    /* -------------------------
+       CARE PACKAGE BUTTON
+    ------------------------- */
+
+    .care-button {
+      margin-top: 28px;
+
+      border: none;
+
+      padding:
+        13px 20px;
+
+      border-radius:
+        999px;
+
+      background:
+        #a94235;
+
+      color:
+        #fffaf0;
+
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size:
+        14px;
+
+      cursor:
+        pointer;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .care-button:hover {
+      transform:
+        translateY(-2px);
+
+      background:
+        #91372d;
+    }
+
+
+    .care-button:active {
+      transform:
+        translateY(0);
     }
 
 
@@ -278,7 +334,7 @@
 
       opacity: 1;
 
-      z-index: 3;
+      z-index: 4;
     }
 
 
@@ -313,6 +369,318 @@
 
       white-space:
         nowrap;
+
+      transition:
+        opacity 0.35s ease;
+    }
+
+
+    /* -------------------------
+       GIFT ICONS
+    ------------------------- */
+
+    .gift {
+      position: absolute;
+
+      left: 50%;
+      top: 52%;
+
+      width: 88px;
+      height: 88px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border: none;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255, 250, 240, 0.92);
+
+      box-shadow:
+        0 10px 26px
+        rgba(76, 52, 35, 0.16);
+
+      font-size:
+        42px;
+
+      cursor:
+        pointer;
+
+      opacity: 0;
+
+      transform:
+        translate(-50%, -50%)
+        scale(0.2)
+        rotate(0deg);
+
+      pointer-events: none;
+
+      z-index: 5;
+
+      transition:
+        transform 0.8s
+        cubic-bezier(.16, .9, .25, 1),
+
+        opacity 0.45s ease,
+
+        box-shadow 0.2s ease;
+    }
+
+
+    .gift:hover {
+      box-shadow:
+        0 14px 30px
+        rgba(76, 52, 35, 0.23);
+    }
+
+
+    /* Individual landing positions */
+
+    .gift-1.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(-310px, -230px)
+        rotate(-8deg)
+        scale(1);
+    }
+
+
+    .gift-2.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(-110px, -290px)
+        rotate(6deg)
+        scale(1);
+    }
+
+
+    .gift-3.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(130px, -270px)
+        rotate(-4deg)
+        scale(1);
+    }
+
+
+    .gift-4.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(235px, -90px)
+        rotate(8deg)
+        scale(1);
+    }
+
+
+    .gift-5.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(-330px, 10px)
+        rotate(4deg)
+        scale(1);
+    }
+
+
+    .gift-6.show {
+      opacity: 1;
+      pointer-events: auto;
+
+      transform:
+        translate(160px, 80px)
+        rotate(-7deg)
+        scale(1);
+    }
+
+
+    /* -------------------------
+       CARE PACKAGE STAGE
+    ------------------------- */
+
+    body.care-package-open .letter {
+      opacity: 0;
+
+      transform:
+        translate(-50%, -95%)
+        scale(0.92);
+
+      pointer-events: none;
+    }
+
+
+    body.care-package-open .prompt {
+      opacity: 0;
+
+      pointer-events: none;
+    }
+
+
+    body.care-package-open .box-img {
+      opacity: 1;
+
+      transform:
+        translateY(95px)
+        scale(0.82);
+
+      filter:
+        drop-shadow(
+          0 16px 15px
+          rgba(70, 50, 30, 0.14)
+        );
+    }
+
+
+    /* -------------------------
+       MODAL
+    ------------------------- */
+
+    .modal-overlay {
+      position: fixed;
+
+      inset: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 24px;
+
+      background:
+        rgba(45, 34, 26, 0.36);
+
+      opacity: 0;
+
+      pointer-events: none;
+
+      z-index: 50;
+
+      transition:
+        opacity 0.3s ease;
+    }
+
+
+    .modal-overlay.show {
+      opacity: 1;
+
+      pointer-events: auto;
+    }
+
+
+    .modal-card {
+      position: relative;
+
+      width:
+        min(520px, 90vw);
+
+      max-height:
+        78vh;
+
+      overflow-y:
+        auto;
+
+      padding:
+        34px 30px;
+
+      background:
+        #fffaf0;
+
+      border:
+        1px solid
+        rgba(120, 90, 65, 0.2);
+
+      box-shadow:
+        0 22px 55px
+        rgba(47, 32, 23, 0.3);
+
+      transform:
+        translateY(20px)
+        scale(0.96);
+
+      transition:
+        transform 0.3s ease;
+    }
+
+
+    .modal-overlay.show .modal-card {
+      transform:
+        translateY(0)
+        scale(1);
+    }
+
+
+    .modal-icon {
+      font-size:
+        48px;
+
+      margin-bottom:
+        10px;
+    }
+
+
+    .modal-title {
+      margin:
+        0 0 14px;
+
+      color:
+        #a94235;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        30px;
+
+      font-weight:
+        400;
+    }
+
+
+    .modal-text {
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size:
+        15px;
+
+      line-height:
+        1.7;
+    }
+
+
+    .close-modal {
+      position: absolute;
+
+      top: 12px;
+      right: 14px;
+
+      border: none;
+
+      background:
+        transparent;
+
+      font-size:
+        25px;
+
+      cursor:
+        pointer;
+
+      color:
+        #5d4a3d;
     }
 
 
@@ -320,10 +688,10 @@
        MOBILE
     ------------------------- */
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
 
       h1 {
-        top: 9vh;
+        top: 7vh;
       }
 
 
@@ -343,24 +711,73 @@
 
       .letter {
         width:
-          82%;
+          84%;
+
+        padding:
+          25px 20px;
       }
 
-    }
+
+      .gift {
+        width:
+          70px;
+
+        height:
+          70px;
+
+        font-size:
+          34px;
+
+        border-radius:
+          18px;
+      }
 
 
-    /* -------------------------
-       REDUCED MOTION
-    ------------------------- */
+      .gift-1.show {
+        transform:
+          translate(-160px, -230px)
+          rotate(-8deg)
+          scale(1);
+      }
 
-    @media (
-      prefers-reduced-motion:
-      reduce
-    ) {
 
-      * {
-        transition:
-          none !important;
+      .gift-2.show {
+        transform:
+          translate(-55px, -300px)
+          rotate(5deg)
+          scale(1);
+      }
+
+
+      .gift-3.show {
+        transform:
+          translate(70px, -265px)
+          rotate(-5deg)
+          scale(1);
+      }
+
+
+      .gift-4.show {
+        transform:
+          translate(95px, -100px)
+          rotate(8deg)
+          scale(1);
+      }
+
+
+      .gift-5.show {
+        transform:
+          translate(-165px, -65px)
+          rotate(4deg)
+          scale(1);
+      }
+
+
+      .gift-6.show {
+        transform:
+          translate(60px, 45px)
+          rotate(-6deg)
+          scale(1);
       }
 
     }
@@ -375,15 +792,10 @@
   <main>
 
 
-    <!-- TITLE -->
-
     <h1>
       you’ve got mail
     </h1>
 
-
-
-    <!-- PACKAGE -->
 
     <div
       class="package"
@@ -394,26 +806,29 @@
     >
 
 
-      <!-- LETTER -->
-
       <div class="letter">
 
         <h2>
-          you’ve got something 💌
+          happy one year 💗
         </h2>
 
         <p>
-          Put your care-package content here.
+          Happy one year anniversary to my favorite person!!
           <br><br>
-          We can replace this with the actual
-          next part of the care package.
+          So grateful to love you and be loved by you 💗
         </p>
+
+
+        <button
+          class="care-button"
+          id="careButton"
+          type="button"
+        >
+          Check out your care package →
+        </button>
 
       </div>
 
-
-
-      <!-- TRANSPARENT BOX IMAGE -->
 
       <img
         class="box-img"
@@ -425,41 +840,172 @@
     </div>
 
 
-
-    <!-- OPEN PROMPT -->
-
     <div
       class="prompt"
       id="prompt"
     >
-
       tap to open
-
     </div>
+
+
+    <!-- GIFT ICONS -->
+
+    <button
+      class="gift gift-1"
+      data-title="a letter for you"
+      data-icon="💌"
+      data-content="Put your longer letter here."
+      type="button"
+    >
+      💌
+    </button>
+
+
+    <button
+      class="gift gift-2"
+      data-title="photos"
+      data-icon="📸"
+      data-content="We can turn this one into a photo gallery."
+      type="button"
+    >
+      📸
+    </button>
+
+
+    <button
+      class="gift gift-3"
+      data-title="a song for you"
+      data-icon="🎵"
+      data-content="Add a song here and explain why it reminds you of him."
+      type="button"
+    >
+      🎵
+    </button>
+
+
+    <button
+      class="gift gift-4"
+      data-title="something redeemable"
+      data-icon="🎟️"
+      data-content="This could become a cute coupon or date ticket."
+      type="button"
+    >
+      🎟️
+    </button>
+
+
+    <button
+      class="gift gift-5"
+      data-title="things i love about you"
+      data-icon="🫶"
+      data-content="We can put little reasons you love him here."
+      type="button"
+    >
+      🫶
+    </button>
+
+
+    <button
+      class="gift gift-6"
+      data-title="a surprise"
+      data-icon="🎁"
+      data-content="Your mystery surprise goes here."
+      type="button"
+    >
+      🎁
+    </button>
 
 
   </main>
 
 
+  <!-- MODAL -->
 
-  <!-- CONFETTI LIBRARY -->
+  <div
+    class="modal-overlay"
+    id="modalOverlay"
+  >
+
+    <div
+      class="modal-card"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+
+      <button
+        class="close-modal"
+        id="closeModal"
+        type="button"
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <div
+        class="modal-icon"
+        id="modalIcon"
+      >
+        💌
+      </div>
+
+
+      <h2
+        class="modal-title"
+        id="modalTitle"
+      >
+        a letter for you
+      </h2>
+
+
+      <div
+        class="modal-text"
+        id="modalText"
+      >
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- CONFETTI -->
 
   <script
     src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
   </script>
 
 
-
-  <!-- PACKAGE INTERACTION -->
-
   <script>
 
     const packageElement =
       document.getElementById("package");
 
-
     const prompt =
       document.getElementById("prompt");
+
+    const careButton =
+      document.getElementById("careButton");
+
+    const gifts =
+      document.querySelectorAll(".gift");
+
+    const modalOverlay =
+      document.getElementById("modalOverlay");
+
+    const modalIcon =
+      document.getElementById("modalIcon");
+
+    const modalTitle =
+      document.getElementById("modalTitle");
+
+    const modalText =
+      document.getElementById("modalText");
+
+    const closeModal =
+      document.getElementById("closeModal");
 
 
 
@@ -470,22 +1016,16 @@
     function fireConfetti() {
 
       confetti({
-
         particleCount: 150,
-
         spread: 90,
-
         startVelocity: 45,
-
         gravity: 0.9,
-
         scalar: 0.9,
 
         origin: {
           x: 0.5,
           y: 0.55
         }
-
       });
 
     }
@@ -493,83 +1033,266 @@
 
 
     /* -------------------------
-       OPEN / CLOSE PACKAGE
+       OPEN PACKAGE
     ------------------------- */
 
-    function togglePackage() {
+    function openPackage() {
 
-
-      const isOpening =
-        !packageElement
+      if (
+        packageElement
           .classList
-          .contains("open");
-
+          .contains("open")
+      ) {
+        return;
+      }
 
 
       packageElement
         .classList
-        .toggle("open");
+        .add("open");
 
 
-
-      if (isOpening) {
-
-
-        prompt.textContent =
-          "tap to close";
+      prompt.textContent =
+        "tap to close";
 
 
-        fireConfetti();
-
-
-      } else {
-
-
-        prompt.textContent =
-          "tap to open";
-
-
-      }
+      fireConfetti();
 
     }
 
 
 
-    /* CLICK */
+    /* -------------------------
+       CLOSE PACKAGE
+    ------------------------- */
+
+    function closePackage() {
+
+      if (
+        document.body
+          .classList
+          .contains("care-package-open")
+      ) {
+        return;
+      }
+
+
+      packageElement
+        .classList
+        .remove("open");
+
+
+      prompt.textContent =
+        "tap to open";
+
+    }
+
+
+
+    /* -------------------------
+       BOX CLICK
+    ------------------------- */
 
     packageElement
       .addEventListener(
         "click",
-        togglePackage
+        function(event) {
+
+          if (
+            event.target
+              .closest(".care-button")
+          ) {
+            return;
+          }
+
+
+          if (
+            packageElement
+              .classList
+              .contains("open")
+          ) {
+            closePackage();
+          } else {
+            openPackage();
+          }
+
+        }
       );
 
 
-
-    /* KEYBOARD */
 
     packageElement
       .addEventListener(
         "keydown",
         function(event) {
 
-
           if (
             event.key === "Enter" ||
             event.key === " "
           ) {
 
-
             event.preventDefault();
 
-
-            togglePackage();
-
+            if (
+              packageElement
+                .classList
+                .contains("open")
+            ) {
+              closePackage();
+            } else {
+              openPackage();
+            }
 
           }
 
         }
       );
 
+
+
+    /* -------------------------
+       REVEAL CARE PACKAGE
+    ------------------------- */
+
+    careButton
+      .addEventListener(
+        "click",
+        function(event) {
+
+          event.stopPropagation();
+
+          document.body
+            .classList
+            .add("care-package-open");
+
+
+          gifts.forEach(
+            function(gift, index) {
+
+              setTimeout(
+                function() {
+
+                  gift
+                    .classList
+                    .add("show");
+
+                },
+                index * 130
+              );
+
+            }
+          );
+
+
+          setTimeout(
+            function() {
+
+              confetti({
+                particleCount: 90,
+                spread: 100,
+                startVelocity: 32,
+                origin: {
+                  x: 0.5,
+                  y: 0.6
+                }
+              });
+
+            },
+            350
+          );
+
+        }
+      );
+
+
+
+    /* -------------------------
+       GIFT POPUPS
+    ------------------------- */
+
+    gifts.forEach(
+      function(gift) {
+
+        gift
+          .addEventListener(
+            "click",
+            function() {
+
+              modalIcon.textContent =
+                gift.dataset.icon;
+
+              modalTitle.textContent =
+                gift.dataset.title;
+
+              modalText.textContent =
+                gift.dataset.content;
+
+              modalOverlay
+                .classList
+                .add("show");
+
+            }
+          );
+
+      }
+    );
+
+
+
+    /* -------------------------
+       CLOSE MODAL
+    ------------------------- */
+
+    closeModal
+      .addEventListener(
+        "click",
+        function() {
+
+          modalOverlay
+            .classList
+            .remove("show");
+
+        }
+      );
+
+
+    modalOverlay
+      .addEventListener(
+        "click",
+        function(event) {
+
+          if (
+            event.target ===
+            modalOverlay
+          ) {
+
+            modalOverlay
+              .classList
+              .remove("show");
+
+          }
+
+        }
+      );
+
+
+    document
+      .addEventListener(
+        "keydown",
+        function(event) {
+
+          if (
+            event.key === "Escape"
+          ) {
+
+            modalOverlay
+              .classList
+              .remove("show");
+
+          }
+
+        }
+      );
 
   </script>
 
