@@ -50,6 +50,7 @@
 
     main {
       position: relative;
+
       width: 100%;
       height: 100vh;
 
@@ -62,12 +63,14 @@
 
     h1 {
       position: absolute;
+
       top: 7vh;
       left: 50%;
 
       transform: translateX(-50%);
 
       width: 100%;
+
       margin: 0;
 
       color: #a94235;
@@ -81,37 +84,40 @@
         clamp(40px, 3.2vw, 62px);
 
       font-weight: 400;
-      letter-spacing: -0.035em;
 
-      transition:
-        opacity 0.5s ease,
-        transform 0.5s ease;
+      letter-spacing: -0.035em;
     }
 
     .package {
       position: relative;
-      width: min(600px, 84vw);
 
-      margin: 0;
+      width:
+        min(600px, 84vw);
+
       cursor: pointer;
+
       user-select: none;
 
-      -webkit-tap-highlight-color: transparent;
+      -webkit-tap-highlight-color:
+        transparent;
 
       transition:
         transform 0.25s ease;
     }
 
     .package:hover {
-      transform: translateY(-4px);
+      transform:
+        translateY(-4px);
     }
 
     .package:active {
-      transform: scale(0.995);
+      transform:
+        scale(0.995);
     }
 
     .box-img {
       position: relative;
+
       display: block;
 
       width: 100%;
@@ -126,8 +132,11 @@
         );
 
       transition:
-        transform 0.65s cubic-bezier(.2, .8, .2, 1),
+        transform 0.65s
+        cubic-bezier(.2, .8, .2, 1),
+
         opacity 0.45s ease,
+
         filter 0.45s ease;
     }
 
@@ -146,12 +155,15 @@
 
       opacity: 0;
 
-      padding: 32px 30px;
+      padding:
+        32px 30px;
 
-      background: #fffaf0;
+      background:
+        #fffaf0;
 
       border:
-        1px solid rgba(120, 90, 65, 0.18);
+        1px solid
+        rgba(120, 90, 65, 0.18);
 
       box-shadow:
         0 16px 42px
@@ -160,14 +172,18 @@
       z-index: 1;
 
       transition:
-        transform 0.75s cubic-bezier(.2, .85, .22, 1),
+        transform 0.75s
+        cubic-bezier(.2, .85, .22, 1),
+
         opacity 0.35s ease;
     }
 
     .letter h2 {
-      margin: 0 0 18px;
+      margin:
+        0 0 18px;
 
-      color: #a94235;
+      color:
+        #a94235;
 
       font-family:
         Georgia,
@@ -177,7 +193,8 @@
       font-size:
         clamp(25px, 2vw, 36px);
 
-      font-weight: 400;
+      font-weight:
+        400;
     }
 
     .letter p {
@@ -190,29 +207,38 @@
       font-size:
         clamp(14px, 1.1vw, 17px);
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
 
     .care-button {
-      margin-top: 28px;
+      margin-top:
+        28px;
 
-      border: none;
+      border:
+        none;
 
-      padding: 13px 20px;
+      padding:
+        13px 20px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: #a94235;
+      background:
+        #a94235;
 
-      color: #fffaf0;
+      color:
+        #fffaf0;
 
       font-family:
         "Courier New",
         monospace;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
       transition:
         transform 0.2s ease,
@@ -220,12 +246,11 @@
     }
 
     .care-button:hover {
-      transform: translateY(-2px);
-      background: #91372d;
-    }
+      transform:
+        translateY(-2px);
 
-    .care-button:active {
-      transform: translateY(0);
+      background:
+        #91372d;
     }
 
     .package.open .box-img {
@@ -233,7 +258,8 @@
         translateY(105px)
         scale(0.91);
 
-      opacity: 0.25;
+      opacity:
+        0.25;
 
       filter:
         drop-shadow(
@@ -247,24 +273,30 @@
         translate(-50%, -82%)
         scale(1);
 
-      opacity: 1;
+      opacity:
+        1;
 
-      z-index: 4;
+      z-index:
+        4;
     }
 
     .prompt {
-      position: absolute;
+      position:
+        absolute;
 
-      left: 50%;
+      left:
+        50%;
 
       top:
         calc(
           50% + min(300px, 28vw)
         );
 
-      transform: translateX(-50%);
+      transform:
+        translateX(-50%);
 
-      margin: 0;
+      margin:
+        0;
 
       font-family:
         "Courier New",
@@ -273,28 +305,46 @@
       font-size:
         clamp(17px, 1.25vw, 24px);
 
-      letter-spacing: 0.05em;
-      white-space: nowrap;
+      letter-spacing:
+        0.05em;
+
+      white-space:
+        nowrap;
 
       transition:
         opacity 0.35s ease;
     }
 
     .gift {
-      position: absolute;
+      position:
+        absolute;
 
-      left: 50%;
-      top: 52%;
+      left:
+        50%;
 
-      width: 88px;
-      height: 88px;
+      top:
+        52%;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width:
+        88px;
 
-      border: none;
-      border-radius: 24px;
+      height:
+        88px;
+
+      display:
+        flex;
+
+      justify-content:
+        center;
+
+      align-items:
+        center;
+
+      border:
+        none;
+
+      border-radius:
+        24px;
 
       background:
         rgba(255, 250, 240, 0.92);
@@ -303,24 +353,32 @@
         0 10px 26px
         rgba(76, 52, 35, 0.16);
 
-      font-size: 42px;
+      font-size:
+        42px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      opacity: 0;
+      opacity:
+        0;
 
       transform:
         translate(-50%, -50%)
         scale(0.2)
         rotate(0deg);
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
-      z-index: 5;
+      z-index:
+        5;
 
       transition:
-        transform 0.8s cubic-bezier(.16, .9, .25, 1),
+        transform 0.8s
+        cubic-bezier(.16, .9, .25, 1),
+
         opacity 0.45s ease,
+
         box-shadow 0.2s ease;
     }
 
@@ -397,7 +455,8 @@
         translate(-50%, -95%)
         scale(0.92);
 
-      pointer-events: none;
+      pointer-events:
+        none;
     }
 
     body.care-package-open .prompt {
@@ -420,49 +479,70 @@
     }
 
     .modal-overlay {
-      position: fixed;
+      position:
+        fixed;
 
-      inset: 0;
+      inset:
+        0;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:
+        flex;
 
-      padding: 24px;
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      padding:
+        24px;
 
       background:
         rgba(45, 34, 26, 0.36);
 
-      opacity: 0;
+      opacity:
+        0;
 
-      pointer-events: none;
+      pointer-events:
+        none;
 
-      z-index: 50;
+      z-index:
+        50;
 
       transition:
         opacity 0.3s ease;
     }
 
     .modal-overlay.show {
-      opacity: 1;
-      pointer-events: auto;
+      opacity:
+        1;
+
+      pointer-events:
+        auto;
     }
 
     .modal-card {
-      position: relative;
+      position:
+        relative;
 
-      width: min(520px, 90vw);
+      width:
+        min(520px, 90vw);
 
-      max-height: 78vh;
+      max-height:
+        78vh;
 
-      overflow-y: auto;
+      overflow-y:
+        auto;
 
-      padding: 34px 30px;
+      padding:
+        34px 30px;
 
-      background: #fffaf0;
+      background:
+        #fffaf0;
 
       border:
-        1px solid rgba(120, 90, 65, 0.2);
+        1px solid
+        rgba(120, 90, 65, 0.2);
 
       box-shadow:
         0 22px 55px
@@ -483,23 +563,30 @@
     }
 
     .modal-icon {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size:
+        48px;
+
+      margin-bottom:
+        10px;
     }
 
     .modal-title {
-      margin: 0 0 14px;
+      margin:
+        0 0 14px;
 
-      color: #a94235;
+      color:
+        #a94235;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 30px;
+      font-size:
+        30px;
 
-      font-weight: 400;
+      font-weight:
+        400;
     }
 
     .modal-text {
@@ -507,36 +594,48 @@
         "Courier New",
         monospace;
 
-      font-size: 15px;
+      font-size:
+        15px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
     }
 
     .close-modal {
-      position: absolute;
+      position:
+        absolute;
 
-      top: 12px;
-      right: 14px;
+      top:
+        12px;
 
-      border: none;
+      right:
+        14px;
 
-      background: transparent;
+      border:
+        none;
 
-      font-size: 25px;
+      background:
+        transparent;
 
-      cursor: pointer;
+      font-size:
+        25px;
 
-      color: #5d4a3d;
+      cursor:
+        pointer;
+
+      color:
+        #5d4a3d;
     }
 
-    /* DATE NIGHT GIFT CARD */
-
     .gift-card {
-      width: 100%;
+      width:
+        100%;
 
-      padding: 34px 26px;
+      padding:
+        34px 26px;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
       background:
         linear-gradient(
@@ -546,13 +645,18 @@
         );
 
       border:
-        1px solid rgba(169, 66, 53, 0.18);
+        1px solid
+        rgba(169, 66, 53, 0.18);
 
       box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.45),
-        0 12px 28px rgba(80, 52, 38, 0.14);
+        inset 0 0 0 1px
+        rgba(255,255,255,0.45),
 
-      text-align: center;
+        0 12px 28px
+        rgba(80, 52, 38, 0.14);
+
+      text-align:
+        center;
     }
 
     .gift-card-small {
@@ -560,64 +664,84 @@
         "Courier New",
         monospace;
 
-      font-size: 12px;
+      font-size:
+        12px;
 
-      letter-spacing: 0.18em;
+      letter-spacing:
+        0.18em;
 
-      color: #7d6253;
+      color:
+        #7d6253;
     }
 
     .gift-card-amount {
-      margin-top: 14px;
+      margin-top:
+        14px;
 
-      color: #a94235;
+      color:
+        #a94235;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 64px;
+      font-size:
+        64px;
 
-      line-height: 1;
+      line-height:
+        1;
     }
 
     .gift-card-title {
-      margin-top: 8px;
+      margin-top:
+        8px;
 
-      color: #2d241f;
+      color:
+        #2d241f;
 
       font-family:
         "Courier New",
         monospace;
 
-      font-size: 20px;
+      font-size:
+        20px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      letter-spacing: 0.08em;
+      letter-spacing:
+        0.08em;
     }
 
     .gift-card-description {
-      margin-top: 18px;
+      margin-top:
+        18px;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 17px;
+      font-size:
+        17px;
 
-      line-height: 1.5;
+      line-height:
+        1.5;
 
-      color: #4d3d33;
+      color:
+        #4d3d33;
     }
 
     .gift-card-divider {
-      width: 70%;
-      height: 1px;
+      width:
+        70%;
 
-      margin: 24px auto;
+      height:
+        1px;
+
+      margin:
+        24px auto;
 
       background:
         rgba(169, 66, 53, 0.22);
@@ -628,138 +752,178 @@
         "Courier New",
         monospace;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-weight: bold;
+      font-weight:
+        bold;
 
-      letter-spacing: 0.12em;
+      letter-spacing:
+        0.12em;
 
-      color: #a94235;
+      color:
+        #a94235;
     }
 
     .gift-card-expiration {
-      margin-top: 8px;
+      margin-top:
+        8px;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-style: italic;
+      font-style:
+        italic;
 
-      color: #7a675d;
+      color:
+        #7a675d;
     }
 
-    /* SONG CARD */
-
     .song-card {
-      text-align: center;
+      text-align:
+        center;
     }
 
     .song-cover {
-      width: min(260px, 80%);
+      width:
+        min(260px, 80%);
 
-      aspect-ratio: 1 / 1;
+      aspect-ratio:
+        1 / 1;
 
-      object-fit: cover;
+      object-fit:
+        cover;
 
-      border-radius: 18px;
+      border-radius:
+        18px;
 
       box-shadow:
         0 12px 30px
         rgba(60, 43, 33, 0.18);
 
-      margin-bottom: 20px;
+      margin-bottom:
+        20px;
     }
 
     .song-info {
-      margin-bottom: 16px;
+      margin-bottom:
+        16px;
     }
 
     .song-title {
-      color: #a94235;
+      color:
+        #a94235;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 28px;
+      font-size:
+        28px;
     }
 
     .song-artist {
-      margin-top: 5px;
+      margin-top:
+        5px;
 
       font-family:
         "Courier New",
         monospace;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      color: #776357;
+      color:
+        #776357;
     }
 
     .song-progress {
-      width: 78%;
-      height: 5px;
+      width:
+        78%;
 
-      margin: 18px auto;
+      height:
+        5px;
 
-      border-radius: 999px;
+      margin:
+        18px auto;
+
+      border-radius:
+        999px;
 
       background:
         rgba(169, 66, 53, 0.14);
 
-      overflow: hidden;
+      overflow:
+        hidden;
     }
 
     .song-progress-fill {
-      width: 42%;
-      height: 100%;
+      width:
+        42%;
 
-      background: #a94235;
+      height:
+        100%;
 
-      border-radius: 999px;
+      background:
+        #a94235;
+
+      border-radius:
+        999px;
     }
 
     .song-note {
       margin:
         20px auto 24px;
 
-      max-width: 330px;
+      max-width:
+        330px;
 
       font-family:
         Georgia,
         "Times New Roman",
         serif;
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      line-height: 1.6;
+      line-height:
+        1.6;
 
-      color: #4d3d33;
+      color:
+        #4d3d33;
     }
 
     .song-button {
-      display: inline-block;
+      display:
+        inline-block;
 
-      padding: 12px 20px;
+      padding:
+        12px 20px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      background: #a94235;
+      background:
+        #a94235;
 
-      color: #fffaf0;
+      color:
+        #fffaf0;
 
-      text-decoration: none;
+      text-decoration:
+        none;
 
       font-family:
         "Courier New",
         monospace;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
       transition:
         transform 0.2s ease,
@@ -767,43 +931,32 @@
     }
 
     .song-button:hover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
-      background: #91372d;
+      background:
+        #91372d;
     }
 
     @media (max-width: 700px) {
-
-      h1 {
-        top: 7vh;
-      }
 
       .package {
         width:
           min(500px, 94vw);
       }
 
-      .prompt {
-        top:
-          calc(
-            50% + min(250px, 43vw)
-          );
-      }
-
-      .letter {
-        width: 84%;
-
-        padding:
-          25px 20px;
-      }
-
       .gift {
-        width: 70px;
-        height: 70px;
+        width:
+          70px;
 
-        font-size: 34px;
+        height:
+          70px;
 
-        border-radius: 18px;
+        font-size:
+          34px;
+
+        border-radius:
+          18px;
       }
 
       .gift-1.show {
@@ -855,7 +1008,6 @@
 
 
 <body>
-
 
   <main>
 
@@ -925,25 +1077,24 @@
     </button>
 
 
+    <!-- 📸 PHOTOS -->
 
-    <!-- 📸 OUR MEMORIES -->
-
-<button
-  class="gift gift-2"
-  data-title="our memories"
-  data-icon="📸"
-  data-type="photos"
-  type="button"
->
-  📸
-</button>
+    <button
+      class="gift gift-2"
+      data-title="our memories"
+      data-icon="📸"
+      data-type="photos"
+      type="button"
+    >
+      📸
+    </button>
 
 
     <!-- 🎵 SONG -->
 
     <button
       class="gift gift-3"
-      data-title="this song sums up how i feel about us ♡"
+      data-title="this one makes me think of you ♡"
       data-icon="🎵"
       data-type="song"
       type="button"
@@ -990,9 +1141,10 @@
       🎁
     </button>
 
-
   </main>
 
+
+  <!-- POPUP -->
 
   <div
     class="modal-overlay"
@@ -1015,14 +1167,12 @@
         ×
       </button>
 
-
       <div
         class="modal-icon"
         id="modalIcon"
       >
         💌
       </div>
-
 
       <h2
         class="modal-title"
@@ -1031,17 +1181,17 @@
         a letter for you
       </h2>
 
-
       <div
         class="modal-text"
         id="modalText"
-      >
-      </div>
+      ></div>
 
     </div>
 
   </div>
 
+
+  <!-- CONFETTI -->
 
   <script
     src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
@@ -1258,12 +1408,34 @@
             "click",
             function() {
 
+
+              /* -------------------------
+                 PHOTOS PAGE
+              ------------------------- */
+
+              if (
+                gift.dataset.type ===
+                "photos"
+              ) {
+
+                window.location.href =
+                  "photos.html";
+
+                return;
+
+              }
+
+
               modalIcon.textContent =
                 gift.dataset.icon;
 
               modalTitle.textContent =
                 gift.dataset.title;
 
+
+              /* -------------------------
+                 DATE NIGHT FUND
+              ------------------------- */
 
               if (
                 gift.dataset.type ===
@@ -1308,6 +1480,10 @@
               }
 
 
+              /* -------------------------
+                 SONG
+              ------------------------- */
+
               else if (
                 gift.dataset.type ===
                 "song"
@@ -1335,17 +1511,14 @@
 
                     </div>
 
-
                     <div class="song-progress">
                       <div class="song-progress-fill">
                       </div>
                     </div>
 
-
                     <div class="song-note">
                       This one always makes me think of you ♡
                     </div>
-
 
                     <a
                       class="song-button"
@@ -1362,6 +1535,10 @@
 
               }
 
+
+              /* -------------------------
+                 NORMAL GIFTS
+              ------------------------- */
 
               else {
 
@@ -1434,7 +1611,6 @@
       );
 
   </script>
-
 
 </body>
 
