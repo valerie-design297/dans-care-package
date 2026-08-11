@@ -35,19 +35,11 @@
       color: #211f1b;
     }
 
-
-    /* -------------------------
-       PAPER TEXTURE
-    ------------------------- */
-
     body::after {
       content: "";
-
       position: fixed;
       inset: 0;
-
       pointer-events: none;
-
       opacity: 0.12;
 
       background-image:
@@ -56,14 +48,8 @@
       z-index: 100;
     }
 
-
-    /* -------------------------
-       PAGE
-    ------------------------- */
-
     main {
       position: relative;
-
       width: 100%;
       height: 100vh;
 
@@ -74,21 +60,14 @@
       text-align: center;
     }
 
-
-    /* -------------------------
-       TITLE
-    ------------------------- */
-
     h1 {
       position: absolute;
-
       top: 7vh;
       left: 50%;
 
       transform: translateX(-50%);
 
       width: 100%;
-
       margin: 0;
 
       color: #a94235;
@@ -102,7 +81,6 @@
         clamp(40px, 3.2vw, 62px);
 
       font-weight: 400;
-
       letter-spacing: -0.035em;
 
       transition:
@@ -110,20 +88,12 @@
         transform 0.5s ease;
     }
 
-
-    /* -------------------------
-       PACKAGE
-    ------------------------- */
-
     .package {
       position: relative;
-
       width: min(600px, 84vw);
 
       margin: 0;
-
       cursor: pointer;
-
       user-select: none;
 
       -webkit-tap-highlight-color: transparent;
@@ -132,24 +102,16 @@
         transform 0.25s ease;
     }
 
-
     .package:hover {
       transform: translateY(-4px);
     }
-
 
     .package:active {
       transform: scale(0.995);
     }
 
-
-    /* -------------------------
-       BOX IMAGE
-    ------------------------- */
-
     .box-img {
       position: relative;
-
       display: block;
 
       width: 100%;
@@ -168,11 +130,6 @@
         opacity 0.45s ease,
         filter 0.45s ease;
     }
-
-
-    /* -------------------------
-       ANNIVERSARY LETTER
-    ------------------------- */
 
     .letter {
       position: absolute;
@@ -207,7 +164,6 @@
         opacity 0.35s ease;
     }
 
-
     .letter h2 {
       margin: 0 0 18px;
 
@@ -224,7 +180,6 @@
       font-weight: 400;
     }
 
-
     .letter p {
       margin: 0;
 
@@ -237,11 +192,6 @@
 
       line-height: 1.7;
     }
-
-
-    /* -------------------------
-       CARE PACKAGE BUTTON
-    ------------------------- */
 
     .care-button {
       margin-top: 28px;
@@ -269,22 +219,14 @@
         background 0.2s ease;
     }
 
-
     .care-button:hover {
       transform: translateY(-2px);
-
       background: #91372d;
     }
-
 
     .care-button:active {
       transform: translateY(0);
     }
-
-
-    /* -------------------------
-       OPEN ANIMATION
-    ------------------------- */
 
     .package.open .box-img {
       transform:
@@ -300,7 +242,6 @@
         );
     }
 
-
     .package.open .letter {
       transform:
         translate(-50%, -82%)
@@ -310,11 +251,6 @@
 
       z-index: 4;
     }
-
-
-    /* -------------------------
-       TAP TO OPEN
-    ------------------------- */
 
     .prompt {
       position: absolute;
@@ -338,17 +274,11 @@
         clamp(17px, 1.25vw, 24px);
 
       letter-spacing: 0.05em;
-
       white-space: nowrap;
 
       transition:
         opacity 0.35s ease;
     }
-
-
-    /* -------------------------
-       GIFT ICONS
-    ------------------------- */
 
     .gift {
       position: absolute;
@@ -364,7 +294,6 @@
       align-items: center;
 
       border: none;
-
       border-radius: 24px;
 
       background:
@@ -395,17 +324,11 @@
         box-shadow 0.2s ease;
     }
 
-
     .gift:hover {
       box-shadow:
         0 14px 30px
         rgba(76, 52, 35, 0.23);
     }
-
-
-    /* -------------------------
-       GIFT POSITIONS
-    ------------------------- */
 
     .gift-1.show {
       opacity: 1;
@@ -417,7 +340,6 @@
         scale(1);
     }
 
-
     .gift-2.show {
       opacity: 1;
       pointer-events: auto;
@@ -427,7 +349,6 @@
         rotate(6deg)
         scale(1);
     }
-
 
     .gift-3.show {
       opacity: 1;
@@ -439,7 +360,6 @@
         scale(1);
     }
 
-
     .gift-4.show {
       opacity: 1;
       pointer-events: auto;
@@ -449,7 +369,6 @@
         rotate(8deg)
         scale(1);
     }
-
 
     .gift-5.show {
       opacity: 1;
@@ -461,7 +380,6 @@
         scale(1);
     }
 
-
     .gift-6.show {
       opacity: 1;
       pointer-events: auto;
@@ -471,11 +389,6 @@
         rotate(-7deg)
         scale(1);
     }
-
-
-    /* -------------------------
-       CARE PACKAGE STAGE
-    ------------------------- */
 
     body.care-package-open .letter {
       opacity: 0;
@@ -487,13 +400,10 @@
       pointer-events: none;
     }
 
-
     body.care-package-open .prompt {
       opacity: 0;
-
       pointer-events: none;
     }
-
 
     body.care-package-open .box-img {
       opacity: 1;
@@ -508,11 +418,6 @@
           rgba(70, 50, 30, 0.14)
         );
     }
-
-
-    /* -------------------------
-       MODAL
-    ------------------------- */
 
     .modal-overlay {
       position: fixed;
@@ -538,13 +443,10 @@
         opacity 0.3s ease;
     }
 
-
     .modal-overlay.show {
       opacity: 1;
-
       pointer-events: auto;
     }
-
 
     .modal-card {
       position: relative;
@@ -574,20 +476,16 @@
         transform 0.3s ease;
     }
 
-
     .modal-overlay.show .modal-card {
       transform:
         translateY(0)
         scale(1);
     }
 
-
     .modal-icon {
       font-size: 48px;
-
       margin-bottom: 10px;
     }
-
 
     .modal-title {
       margin: 0 0 14px;
@@ -604,7 +502,6 @@
       font-weight: 400;
     }
 
-
     .modal-text {
       font-family:
         "Courier New",
@@ -614,7 +511,6 @@
 
       line-height: 1.7;
     }
-
 
     .close-modal {
       position: absolute;
@@ -633,10 +529,7 @@
       color: #5d4a3d;
     }
 
-
-    /* -------------------------
-       DATE NIGHT GIFT CARD
-    ------------------------- */
+    /* DATE NIGHT GIFT CARD */
 
     .gift-card {
       width: 100%;
@@ -656,15 +549,11 @@
         1px solid rgba(169, 66, 53, 0.18);
 
       box-shadow:
-        inset 0 0 0 1px
-        rgba(255,255,255,0.45),
-
-        0 12px 28px
-        rgba(80, 52, 38, 0.14);
+        inset 0 0 0 1px rgba(255,255,255,0.45),
+        0 12px 28px rgba(80, 52, 38, 0.14);
 
       text-align: center;
     }
-
 
     .gift-card-small {
       font-family:
@@ -677,7 +566,6 @@
 
       color: #7d6253;
     }
-
 
     .gift-card-amount {
       margin-top: 14px;
@@ -693,7 +581,6 @@
 
       line-height: 1;
     }
-
 
     .gift-card-title {
       margin-top: 8px;
@@ -711,7 +598,6 @@
       letter-spacing: 0.08em;
     }
 
-
     .gift-card-description {
       margin-top: 18px;
 
@@ -727,7 +613,6 @@
       color: #4d3d33;
     }
 
-
     .gift-card-divider {
       width: 70%;
       height: 1px;
@@ -737,7 +622,6 @@
       background:
         rgba(169, 66, 53, 0.22);
     }
-
 
     .gift-card-from {
       font-family:
@@ -752,7 +636,6 @@
 
       color: #a94235;
     }
-
 
     .gift-card-expiration {
       margin-top: 8px;
@@ -769,10 +652,125 @@
       color: #7a675d;
     }
 
+    /* SONG CARD */
 
-    /* -------------------------
-       MOBILE
-    ------------------------- */
+    .song-card {
+      text-align: center;
+    }
+
+    .song-cover {
+      width: min(260px, 80%);
+
+      aspect-ratio: 1 / 1;
+
+      object-fit: cover;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 12px 30px
+        rgba(60, 43, 33, 0.18);
+
+      margin-bottom: 20px;
+    }
+
+    .song-info {
+      margin-bottom: 16px;
+    }
+
+    .song-title {
+      color: #a94235;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 28px;
+    }
+
+    .song-artist {
+      margin-top: 5px;
+
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size: 14px;
+
+      color: #776357;
+    }
+
+    .song-progress {
+      width: 78%;
+      height: 5px;
+
+      margin: 18px auto;
+
+      border-radius: 999px;
+
+      background:
+        rgba(169, 66, 53, 0.14);
+
+      overflow: hidden;
+    }
+
+    .song-progress-fill {
+      width: 42%;
+      height: 100%;
+
+      background: #a94235;
+
+      border-radius: 999px;
+    }
+
+    .song-note {
+      margin:
+        20px auto 24px;
+
+      max-width: 330px;
+
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size: 16px;
+
+      line-height: 1.6;
+
+      color: #4d3d33;
+    }
+
+    .song-button {
+      display: inline-block;
+
+      padding: 12px 20px;
+
+      border-radius: 999px;
+
+      background: #a94235;
+
+      color: #fffaf0;
+
+      text-decoration: none;
+
+      font-family:
+        "Courier New",
+        monospace;
+
+      font-size: 14px;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .song-button:hover {
+      transform: translateY(-2px);
+
+      background: #91372d;
+    }
 
     @media (max-width: 700px) {
 
@@ -780,12 +778,10 @@
         top: 7vh;
       }
 
-
       .package {
         width:
           min(500px, 94vw);
       }
-
 
       .prompt {
         top:
@@ -794,14 +790,12 @@
           );
       }
 
-
       .letter {
         width: 84%;
 
         padding:
           25px 20px;
       }
-
 
       .gift {
         width: 70px;
@@ -812,14 +806,12 @@
         border-radius: 18px;
       }
 
-
       .gift-1.show {
         transform:
           translate(-160px, -230px)
           rotate(-8deg)
           scale(1);
       }
-
 
       .gift-2.show {
         transform:
@@ -828,14 +820,12 @@
           scale(1);
       }
 
-
       .gift-3.show {
         transform:
           translate(70px, -265px)
           rotate(-5deg)
           scale(1);
       }
-
 
       .gift-4.show {
         transform:
@@ -844,14 +834,12 @@
           scale(1);
       }
 
-
       .gift-5.show {
         transform:
           translate(-165px, -65px)
           rotate(4deg)
           scale(1);
       }
-
 
       .gift-6.show {
         transform:
@@ -871,16 +859,10 @@
 
   <main>
 
-
-    <!-- TITLE -->
-
     <h1>
       you’ve got mail
     </h1>
 
-
-
-    <!-- PACKAGE -->
 
     <div
       class="package"
@@ -889,9 +871,6 @@
       tabindex="0"
       aria-label="Open digital care package"
     >
-
-
-      <!-- ANNIVERSARY NOTE -->
 
       <div class="letter">
 
@@ -905,7 +884,6 @@
           So grateful to love you and be loved by you 💗
         </p>
 
-
         <button
           class="care-button"
           id="careButton"
@@ -917,21 +895,14 @@
       </div>
 
 
-
-      <!-- BOX -->
-
       <img
         class="box-img"
         src="box.png"
         alt="Digital care package"
       >
 
-
     </div>
 
-
-
-    <!-- TAP TO OPEN -->
 
     <div
       class="prompt"
@@ -939,12 +910,6 @@
     >
       tap to open
     </div>
-
-
-
-    <!-- =====================
-         GIFT ICONS
-    ====================== -->
 
 
     <!-- 💌 LETTER -->
@@ -960,7 +925,6 @@
     </button>
 
 
-
     <!-- 📸 PHOTOS -->
 
     <button
@@ -974,19 +938,17 @@
     </button>
 
 
-
     <!-- 🎵 SONG -->
 
     <button
       class="gift gift-3"
-      data-title="a song for you"
+      data-title="this one makes me think of you ♡"
       data-icon="🎵"
-      data-content="Add a song here and explain why it reminds you of him."
+      data-type="song"
       type="button"
     >
       🎵
     </button>
-
 
 
     <!-- 🎟️ COUPON -->
@@ -1002,7 +964,6 @@
     </button>
 
 
-
     <!-- 🫶 THINGS I LOVE -->
 
     <button
@@ -1014,7 +975,6 @@
     >
       🫶
     </button>
-
 
 
     <!-- 🎁 DATE NIGHT FUND -->
@@ -1033,11 +993,6 @@
   </main>
 
 
-
-  <!-- =====================
-       POPUP
-  ====================== -->
-
   <div
     class="modal-overlay"
     id="modalOverlay"
@@ -1049,7 +1004,6 @@
       aria-modal="true"
       aria-labelledby="modalTitle"
     >
-
 
       <button
         class="close-modal"
@@ -1083,21 +1037,14 @@
       >
       </div>
 
-
     </div>
 
   </div>
 
 
-
-  <!-- =====================
-       CONFETTI LIBRARY
-  ====================== -->
-
   <script
     src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js">
   </script>
-
 
 
   <script>
@@ -1130,39 +1077,23 @@
       document.getElementById("closeModal");
 
 
-
-    /* -------------------------
-       CONFETTI
-    ------------------------- */
-
     function fireConfetti() {
 
       confetti({
-
         particleCount: 150,
-
         spread: 90,
-
         startVelocity: 45,
-
         gravity: 0.9,
-
         scalar: 0.9,
 
         origin: {
           x: 0.5,
           y: 0.55
         }
-
       });
 
     }
 
-
-
-    /* -------------------------
-       OPEN PACKAGE
-    ------------------------- */
 
     function openPackage() {
 
@@ -1174,25 +1105,17 @@
         return;
       }
 
-
       packageElement
         .classList
         .add("open");
 
-
       prompt.textContent =
         "tap to close";
-
 
       fireConfetti();
 
     }
 
-
-
-    /* -------------------------
-       CLOSE PACKAGE
-    ------------------------- */
 
     function closePackage() {
 
@@ -1204,22 +1127,15 @@
         return;
       }
 
-
       packageElement
         .classList
         .remove("open");
-
 
       prompt.textContent =
         "tap to open";
 
     }
 
-
-
-    /* -------------------------
-       BOX CLICK
-    ------------------------- */
 
     packageElement
       .addEventListener(
@@ -1232,7 +1148,6 @@
           ) {
             return;
           }
-
 
           if (
             packageElement
@@ -1252,11 +1167,6 @@
       );
 
 
-
-    /* -------------------------
-       KEYBOARD
-    ------------------------- */
-
     packageElement
       .addEventListener(
         "keydown",
@@ -1268,7 +1178,6 @@
           ) {
 
             event.preventDefault();
-
 
             if (
               packageElement
@@ -1290,11 +1199,6 @@
       );
 
 
-
-    /* -------------------------
-       REVEAL CARE PACKAGE
-    ------------------------- */
-
     careButton
       .addEventListener(
         "click",
@@ -1302,11 +1206,9 @@
 
           event.stopPropagation();
 
-
           document.body
             .classList
             .add("care-package-open");
-
 
           gifts.forEach(
             function(gift, index) {
@@ -1319,45 +1221,33 @@
                     .add("show");
 
                 },
-
                 index * 130
               );
 
             }
           );
 
-
           setTimeout(
             function() {
 
               confetti({
-
                 particleCount: 90,
-
                 spread: 100,
-
                 startVelocity: 32,
 
                 origin: {
                   x: 0.5,
                   y: 0.6
                 }
-
               });
 
             },
-
             350
           );
 
         }
       );
 
-
-
-    /* -------------------------
-       GIFT POPUPS
-    ------------------------- */
 
     gifts.forEach(
       function(gift) {
@@ -1367,23 +1257,17 @@
             "click",
             function() {
 
-
               modalIcon.textContent =
                 gift.dataset.icon;
-
 
               modalTitle.textContent =
                 gift.dataset.title;
 
 
-
-              /* DATE NIGHT FUND */
-
               if (
                 gift.dataset.type ===
                 "giftcard"
               ) {
-
 
                 modalText.innerHTML = `
 
@@ -1393,30 +1277,24 @@
                       FOR DAN
                     </div>
 
-
                     <div class="gift-card-amount">
                       $30
                     </div>
-
 
                     <div class="gift-card-title">
                       DATE NIGHT FUND
                     </div>
 
-
                     <div class="gift-card-description">
                       For dinner, dessert, or whatever you want 💗
                     </div>
 
-
                     <div class="gift-card-divider">
                     </div>
-
 
                     <div class="gift-card-from">
                       FROM VALERIE
                     </div>
-
 
                     <div class="gift-card-expiration">
                       no expiration, obviously
@@ -1426,11 +1304,63 @@
 
                 `;
 
-
               }
 
 
-              /* NORMAL GIFTS */
+              else if (
+                gift.dataset.type ===
+                "song"
+              ) {
+
+                modalText.innerHTML = `
+
+                  <div class="song-card">
+
+                    <img
+                      class="song-cover"
+                      src="sure-thing.jpg"
+                      alt="Sure Thing by Miguel album cover"
+                    >
+
+                    <div class="song-info">
+
+                      <div class="song-title">
+                        Sure Thing
+                      </div>
+
+                      <div class="song-artist">
+                        Miguel
+                      </div>
+
+                    </div>
+
+
+                    <div class="song-progress">
+                      <div class="song-progress-fill">
+                      </div>
+                    </div>
+
+
+                    <div class="song-note">
+                      This one always makes me think of you ♡
+                    </div>
+
+
+                    <a
+                      class="song-button"
+                      href="YOUR_SPOTIFY_LINK_HERE"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      listen to it ♫
+                    </a>
+
+                  </div>
+
+                `;
+
+              }
+
 
               else {
 
@@ -1440,11 +1370,9 @@
               }
 
 
-
               modalOverlay
                 .classList
                 .add("show");
-
 
             }
           );
@@ -1452,11 +1380,6 @@
       }
     );
 
-
-
-    /* -------------------------
-       CLOSE POPUP BUTTON
-    ------------------------- */
 
     closeModal
       .addEventListener(
@@ -1470,11 +1393,6 @@
         }
       );
 
-
-
-    /* -------------------------
-       CLICK OUTSIDE POPUP
-    ------------------------- */
 
     modalOverlay
       .addEventListener(
@@ -1496,11 +1414,6 @@
       );
 
 
-
-    /* -------------------------
-       ESCAPE KEY
-    ------------------------- */
-
     document
       .addEventListener(
         "keydown",
@@ -1518,7 +1431,6 @@
 
         }
       );
-
 
   </script>
 
