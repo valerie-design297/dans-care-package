@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Our Memories ♡</title>
+
+  <!-- Polaroid page styling -->
+  <link
+    rel="stylesheet"
+    href="photos.css"
+  >
+</head>
+
+
+<body>
+
+  <main class="memory-page">
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="memory-header">
+
+      <a
+        class="back-link"
+        href="index.html"
+      >
+        ← back to your care package
+      </a>
+
+      <h1>
+        some of my favorite memories
+      </h1>
+
+      <p class="subtitle">
+        click through them ♡
+      </p>
+
+    </header>
+
+
+    <!-- =========================
+         POLAROID AREA
+    ========================== -->
+
+    <section
+      class="polaroid-area"
+      aria-label="Our memories"
+    >
+
+      <!--
+        JavaScript will automatically
+        put all of our Polaroids here.
+      -->
+
+      <div
+        class="polaroid-stack"
+        id="polaroidStack"
+      ></div>
+
+
+      <!-- PROGRESS -->
+
+      <div class="memory-controls">
+
+        <p
+          class="counter"
+          id="counter"
+        >
+          1 / 10
+        </p>
+
+        <p class="click-hint">
+          click the photo for the next memory →
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ENDING SCREEN
+
+         Hidden until all 10
+         Polaroids have been viewed.
+    ========================== -->
+
+    <section
+      class="ending"
+      id="ending"
+      aria-hidden="true"
+    >
+
+      <div class="ending-card">
+
+        <p class="ending-small">
+          and so many more...
+        </p>
+
+        <h2>
+          to be continued ♡
+        </h2>
+
+        <p>
+          here's to another year of
+          making memories with you :)
+        </p>
+
+        <a
+          class="return-button"
+          href="index.html"
+        >
+          back to your care package
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Our Polaroid behavior -->
+  <script src="photos.js"></script>
+
+</body>
+
+</html>
