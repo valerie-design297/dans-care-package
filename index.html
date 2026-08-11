@@ -90,8 +90,7 @@
     .package {
       position: relative;
 
-      width:
-        min(600px, 84vw);
+      width: min(600px, 84vw);
 
       cursor: pointer;
 
@@ -105,13 +104,11 @@
     }
 
     .package:hover {
-      transform:
-        translateY(-4px);
+      transform: translateY(-4px);
     }
 
     .package:active {
-      transform:
-        scale(0.995);
+      transform: scale(0.995);
     }
 
     .box-img {
@@ -131,11 +128,8 @@
         );
 
       transition:
-        transform 0.65s
-        cubic-bezier(.2, .8, .2, 1),
-
+        transform 0.65s cubic-bezier(.2, .8, .2, 1),
         opacity 0.45s ease,
-
         filter 0.45s ease;
     }
 
@@ -161,8 +155,7 @@
         #fffaf0;
 
       border:
-        1px solid
-        rgba(120, 90, 65, 0.18);
+        1px solid rgba(120, 90, 65, 0.18);
 
       box-shadow:
         0 16px 42px
@@ -171,9 +164,7 @@
       z-index: 1;
 
       transition:
-        transform 0.75s
-        cubic-bezier(.2, .85, .22, 1),
-
+        transform 0.75s cubic-bezier(.2, .85, .22, 1),
         opacity 0.35s ease;
     }
 
@@ -245,8 +236,7 @@
     }
 
     .care-button:hover {
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
 
       background:
         #91372d;
@@ -373,11 +363,8 @@
         5;
 
       transition:
-        transform 0.8s
-        cubic-bezier(.16, .9, .25, 1),
-
+        transform 0.8s cubic-bezier(.16, .9, .25, 1),
         opacity 0.45s ease,
-
         box-shadow 0.2s ease;
     }
 
@@ -387,12 +374,16 @@
         rgba(76, 52, 35, 0.23);
     }
 
+    /* -------------------------
+       FIVE GIFT POSITIONS
+    ------------------------- */
+
     .gift-1.show {
       opacity: 1;
       pointer-events: auto;
 
       transform:
-        translate(-310px, -230px)
+        translate(-300px, -210px)
         rotate(-8deg)
         scale(1);
     }
@@ -402,7 +393,7 @@
       pointer-events: auto;
 
       transform:
-        translate(-110px, -290px)
+        translate(-105px, -290px)
         rotate(6deg)
         scale(1);
     }
@@ -412,8 +403,8 @@
       pointer-events: auto;
 
       transform:
-        translate(130px, -270px)
-        rotate(-4deg)
+        translate(120px, -280px)
+        rotate(-5deg)
         scale(1);
     }
 
@@ -422,7 +413,7 @@
       pointer-events: auto;
 
       transform:
-        translate(235px, -90px)
+        translate(235px, -105px)
         rotate(8deg)
         scale(1);
     }
@@ -432,18 +423,8 @@
       pointer-events: auto;
 
       transform:
-        translate(-330px, 10px)
-        rotate(4deg)
-        scale(1);
-    }
-
-    .gift-6.show {
-      opacity: 1;
-      pointer-events: auto;
-
-      transform:
-        translate(160px, 80px)
-        rotate(-7deg)
+        translate(-300px, 20px)
+        rotate(5deg)
         scale(1);
     }
 
@@ -960,43 +941,36 @@
 
       .gift-1.show {
         transform:
-          translate(-160px, -230px)
+          translate(-150px, -215px)
           rotate(-8deg)
           scale(1);
       }
 
       .gift-2.show {
         transform:
-          translate(-55px, -300px)
+          translate(-48px, -300px)
           rotate(5deg)
           scale(1);
       }
 
       .gift-3.show {
         transform:
-          translate(70px, -265px)
+          translate(68px, -270px)
           rotate(-5deg)
           scale(1);
       }
 
       .gift-4.show {
         transform:
-          translate(95px, -100px)
+          translate(95px, -105px)
           rotate(8deg)
           scale(1);
       }
 
       .gift-5.show {
         transform:
-          translate(-165px, -65px)
+          translate(-155px, -55px)
           rotate(4deg)
-          scale(1);
-      }
-
-      .gift-6.show {
-        transform:
-          translate(60px, 45px)
-          rotate(-6deg)
           scale(1);
       }
 
@@ -1118,7 +1092,7 @@
     <!-- 🎁 DATE NIGHT FUND -->
 
     <button
-      class="gift gift-6"
+      class="gift gift-5"
       data-title="date night fund"
       data-icon="🎁"
       data-type="giftcard"
@@ -1395,9 +1369,7 @@
             function() {
 
 
-              /* -------------------------
-                 PHOTOS PAGE
-              ------------------------- */
+              /* PHOTOS */
 
               if (
                 gift.dataset.type ===
@@ -1412,9 +1384,7 @@
               }
 
 
-              /* -------------------------
-                 AWARDS PAGE
-              ------------------------- */
+              /* AWARDS */
 
               if (
                 gift.dataset.type ===
@@ -1436,9 +1406,7 @@
                 gift.dataset.title;
 
 
-              /* -------------------------
-                 DATE NIGHT FUND
-              ------------------------- */
+              /* DATE NIGHT FUND */
 
               if (
                 gift.dataset.type ===
@@ -1483,9 +1451,7 @@
               }
 
 
-              /* -------------------------
-                 SONG
-              ------------------------- */
+              /* SONG */
 
               else if (
                 gift.dataset.type ===
@@ -1539,9 +1505,7 @@
               }
 
 
-              /* -------------------------
-                 NORMAL GIFTS
-              ------------------------- */
+              /* LETTER */
 
               else {
 
