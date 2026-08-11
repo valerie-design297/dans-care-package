@@ -36,6 +36,12 @@ const awards = [
   },
 
   {
+    icon: "🐓",
+    title: "Best stardew partner",
+    text: "For always taking care of our animals!"
+  },
+
+  {
     icon: "🍆",
     title: "You know what",
     text: "😋."
